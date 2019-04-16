@@ -11,7 +11,7 @@ true.states = c(rep(0,100),rep(0.5,100),rep(1,100))
 returns = c( bearMarket, bullMarketOne, bullMarketOne, bearMarket )
 
 y=returns
-ResFit = HMMFit(y, nStates=2) #Fit a HMM with 2 states to the data
+ResFit = HMMFit(y, nStates=4) #Fit a HMM with 2 states to the data
 VitPath = viterbi(ResFit, y) #Use the viterbi algorithm to find the most likely state path (of the training data)
 fb = forwardBackward(ResFit, y) #Forward-backward procedure, compute probabilities
  
